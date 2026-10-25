@@ -7,6 +7,8 @@
 
 **137.0 秒 · 1920×1080 · 30 fps · AAC 48 kHz 立体声**
 
+> 成片（59 MB，MP4）：见 [Releases](https://github.com/shea17/pelican-test/releases)。
+
 ---
 
 ## 这是什么
