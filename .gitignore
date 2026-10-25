@@ -1,0 +1,10 @@
+node_modules/
+out/
+frames*/
+docs/media/*
+!docs/media/.gitkeep
+*.wav
+.DS_Store
+Thumbs.db
+tools/tmpfix*.mjs
+.workbuddy/

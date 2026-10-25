@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #120c06; }
+  #c {
+    position: relative;
+    width: 1146px;
+    height: 860px;
+    overflow: hidden;
+    background: #120c06;
+  }
+  #bg {
+    position: absolute;
+    inset: 0;
+    width: 1146px;
+    height: 860px;
+    object-fit: cover;
+    object-position: 44% 46%;
+  }
+  .scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(16,9,4,0.95) 0%, rgba(16,9,4,0.62) 26%, rgba(16,9,4,0.0) 56%),
+      linear-gradient(to right, rgba(16,9,4,0.62) 0%, rgba(16,9,4,0.0) 52%);
+  }
+  .band {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1146px;
+    height: 300px;
+    background: linear-gradient(to bottom, rgba(22,14,8,0.0), rgba(18,11,6,0.88) 40%, rgba(16,10,5,0.98));
+  }
+  .txt {
+    position: absolute;
+    left: 58px;
+    bottom: 52px;
+    width: 700px;
+  }
+  .kicker {
+    font: 600 17px/1 "Noto Sans SC", "PingFang SC", sans-serif;
+    letter-spacing: 7px;
+    color: #d8a05e;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font: 900 118px/0.98 "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    letter-spacing: 9px;
+    color: #f7f0dd;
+    text-shadow: 0 6px 28px rgba(0,0,0,0.7);
+  }
+  .rule {
+    width: 58px;
+    height: 3px;
+    background: #c9822f;
+    margin: 18px 0 16px;
+  }
+  .sub {
+    font: 500 32px/1.35 "Noto Sans SC", "PingFang SC", sans-serif;
+    letter-spacing: 3px;
+    color: #efe2c6;
+  }
+  .sub b { color: #f2b968; font-weight: 700; }
+  .badge {
+    position: absolute;
+    right: 44px;
+    bottom: 52px;
+    padding: 10px 17px;
+    border: 1.5px solid rgba(247,240,221,0.55);
+    font: 600 17px/1 "Noto Sans SC", sans-serif;
+    letter-spacing: 3px;
+    color: #f7f0dd;
+    background: rgba(20,12,6,0.45);
+  }
+</style>
+</head>
+<body>
+<div id="c">
+  <img id="bg" src="../../docs/images/seam-frame.png" alt="">
+  <div class="scrim"></div>
+  <div class="band"></div>
+  <div class="badge">全片零手绘 · 137 秒</div>
+  <div class="txt">
+    <div class="kicker">THE PELICAN TEST</div>
+    <h1>鹈鹕测试</h1>
+    <div class="rule"></div>
+    <div class="sub">一只鸟，骑过<b>六千年</b>美术史</div>
+  </div>
+</div>
+</body>
+</html>

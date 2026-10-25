@@ -1,0 +1,23 @@
+{
+  "name": "pelican-test",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Pelican Test — a 137-second procedural film: one pelican rides a continuous handscroll across twenty art styles",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node tools/serve.mjs",
+    "shot": "node tools/shot.mjs",
+    "sheet": "node tools/sheet.mjs",
+    "render": "node tools/render.mjs",
+    "encode": "node tools/encode.mjs",
+    "music": "node tools/music.mjs",
+    "mux": "node tools/mux.mjs",
+    "perf": "node tools/perf.mjs",
+    "cover": "node tools/cover/shot.mjs"
+  },
+  "dependencies": {
+    "p5": "2.3.4",
+    "puppeteer-core": "^25.16.0"
+  }
+}

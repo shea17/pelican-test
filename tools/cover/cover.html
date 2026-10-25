@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #120c06; }
+  #c {
+    position: relative;
+    width: 1146px;
+    height: 717px;
+    overflow: hidden;
+    background: #120c06;
+  }
+  #bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1146px;
+    height: 717px;
+    object-fit: cover;
+    object-position: 50% 44%;
+  }
+  /* 压暗：左下角最重，保证字压得住 */
+  .scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(16,9,4,0.92) 0%, rgba(16,9,4,0.55) 22%, rgba(16,9,4,0.0) 52%),
+      linear-gradient(to right, rgba(16,9,4,0.55) 0%, rgba(16,9,4,0.0) 46%);
+  }
+  /* 底部的纸色横条：让标题落在一条"画签"上 */
+  .band {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1146px;
+    height: 228px;
+    background: linear-gradient(to bottom, rgba(22,14,8,0.0), rgba(18,11,6,0.86) 42%, rgba(16,10,5,0.97));
+  }
+  .txt {
+    position: absolute;
+    left: 58px;
+    bottom: 40px;
+    width: 660px;
+  }
+  .kicker {
+    font: 600 17px/1 "Noto Sans SC", "PingFang SC", sans-serif;
+    letter-spacing: 7px;
+    color: #d8a05e;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font: 900 104px/0.98 "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    letter-spacing: 8px;
+    color: #f7f0dd;
+    text-shadow: 0 6px 26px rgba(0,0,0,0.65);
+  }
+  .rule {
+    width: 54px;
+    height: 3px;
+    background: #c9822f;
+    margin: 16px 0 14px;
+  }
+  .sub {
+    font: 500 30px/1.35 "Noto Sans SC", "PingFang SC", sans-serif;
+    letter-spacing: 3px;
+    color: #efe2c6;
+  }
+  .sub b { color: #f2b968; font-weight: 700; }
+  /* 右上角的角标：一行字讲清"这是什么" */
+  .badge {
+    position: absolute;
+    right: 44px;
+    bottom: 44px;
+    padding: 9px 16px;
+    border: 1.5px solid rgba(247,240,221,0.55);
+    font: 600 17px/1 "Noto Sans SC", sans-serif;
+    letter-spacing: 3px;
+    color: #f7f0dd;
+    background: rgba(20,12,6,0.42);
+    backdrop-filter: blur(2px);
+  }
+</style>
+</head>
+<body>
+<div id="c">
+  <img id="bg" src="../../docs/images/seam-frame.png" alt="">
+  <div class="scrim"></div>
+  <div class="band"></div>
+  <div class="badge">全片零手绘 · 137 秒</div>
+  <div class="txt">
+    <div class="kicker">THE PELICAN TEST</div>
+    <h1>鹈鹕测试</h1>
+    <div class="rule"></div>
+    <div class="sub">一只鸟，骑过<b>六千年</b>美术史</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+:root {
+  --ink: #1a1a18;
+  --paper: #f2ece0;
+  --muted: #8a8578;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b0b0c;
+  overflow: hidden;
+  font-family: "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+#stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+#frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+#frame canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  display: block;
+}
+#frame canvas#gl {
+  z-index: 1;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+#frame canvas#ui2d {
+  z-index: 2;
+  pointer-events: none;
+}
+
+#bar {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: min(1120px, calc(100% - 64px));
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "play track clock"
+    "now  now   now";
+  gap: 10px 18px;
+  padding: 14px 20px 12px;
+  border-radius: 14px;
+  background: rgba(18, 18, 20, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(14px);
+  color: #e8e4da;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  transition: opacity 0.35s ease;
+}
+body[data-view="raw"] #bar { display: none; }
+
+#play {
+  grid-area: play;
+  width: 62px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f0ece2;
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+#play:hover { background: rgba(255, 255, 255, 0.13); }
+
+#track {
+  grid-area: track;
+  position: relative;
+  height: 26px;
+  cursor: pointer;
+}
+#track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.16);
+}
+#fill {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  height: 2px;
+  width: 0;
+  background: #d8c9a0;
+}
+#ticks {
+  position: absolute;
+  inset: 0;
+}
+#ticks i {
+  position: absolute;
+  top: 8px;
+  width: 1px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.22);
+}
+#ticks i.scene { top: 6px; height: 14px; background: rgba(216, 201, 160, 0.5); }
+#knob {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: #f2ece0;
+}
+
+#clock {
+  grid-area: clock;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  white-space: nowrap;
+}
+#now {
+  grid-area: now;
+  color: #cfc7b4;
+  min-height: 1em;
+  letter-spacing: 0.04em;
+}
+#now b { color: #f2ece0; font-weight: 500; }
+#now span { color: #7d7768; }
